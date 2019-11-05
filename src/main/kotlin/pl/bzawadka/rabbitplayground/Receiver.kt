@@ -3,7 +3,7 @@ package pl.bzawadka.rabbitplayground
 import org.springframework.amqp.rabbit.annotation.RabbitListener
 import org.springframework.amqp.rabbit.annotation.RabbitHandler
 
-@RabbitListener(queues = ["hello"])
+@RabbitListener(queues = ["myqueue"])
 class Receiver {
 
     @RabbitHandler
