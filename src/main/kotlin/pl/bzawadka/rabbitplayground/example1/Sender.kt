@@ -7,7 +7,6 @@ import org.springframework.scheduling.annotation.Scheduled
 import kotlin.random.Random
 
 class Sender {
-
     @Autowired
     private val template: RabbitTemplate? = null
 
@@ -22,5 +21,3 @@ class Sender {
         println(" [x] Sent '$message'")
     }
 }
-
-// https://www.rabbitmq.com/tutorials/tutorial-two-spring-amqp.html

@@ -10,3 +10,9 @@ start one or more `RabbitPlaygroundApplication` or
 
 ##### Producer / Sender
 `java -jar build/libs/rabbit-playground-0.0.1-SNAPSHOT.jar --spring.profiles.active=example-1,sender`
+
+## Example 2 - work queues
+distributing tasks among workers
+[competing consumers](https://www.enterpriseintegrationpatterns.com/patterns/messaging/CompetingConsumers.html) pattern
+
+
