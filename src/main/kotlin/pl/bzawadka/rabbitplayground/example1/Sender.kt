@@ -1,9 +1,10 @@
-package pl.bzawadka.rabbitplayground
+package pl.bzawadka.rabbitplayground.example1
 
 import org.springframework.amqp.core.Queue
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.amqp.rabbit.core.RabbitTemplate
 import org.springframework.scheduling.annotation.Scheduled
+import kotlin.random.Random
 
 class Sender {
 
@@ -15,9 +16,11 @@ class Sender {
 
     @Scheduled(fixedDelay = 1000, initialDelay = 500)
     fun send() {
-        val message = "Hello World!"
-        this.template?.convertAndSend(queue?.getName()!!, message)
+        val id: Char = Random.nextInt(65, 90).toChar()
+        val message = "Hello $id"
+        this.template?.convertAndSend(queue?.name!!, message)
         println(" [x] Sent '$message'")
     }
 }
 
+// https://www.rabbitmq.com/tutorials/tutorial-two-spring-amqp.html

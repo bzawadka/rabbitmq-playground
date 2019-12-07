@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: receiver,hello-world
+    active: receiver,example-1
 
 logging:
   level:
